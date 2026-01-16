@@ -54,6 +54,12 @@ export const updateUserProfile = (id, profileData) => {
     return null;
 };
 
+export const deleteUser = (id) => {
+    let users = getUsers();
+    users = users.filter(u => u.id !== id);
+    localStorage.setItem(DB_KEY, JSON.stringify(users));
+};
+
 // Seed initial user (Chiranth) if DB is empty
 if (!getUsers().length) {
     const chiranth = {
