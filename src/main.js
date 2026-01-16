@@ -1,3 +1,4 @@
+import './style.css';
 import { getUsers, saveUser, findUser, loginUser, logoutUser, getCurrentUser, findUserById, updateUserProfile, deleteUser } from './utils/storage.js';
 import { LoginView, RegisterView } from './views/LoginView.js';
 import { ProfileView } from './views/ProfileView.js';
